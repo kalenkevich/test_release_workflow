@@ -1,6 +1,6 @@
-const { GoogleGenAI } = require("@google/genai");
-const { execSync } = require("child_process");
-const fs = require("fs");
+import * as fs from "fs";
+import { execSync } from "child_process";
+import { GoogleGenAI } from "@google/genai";
 
 // Initialize Gemini
 const ai = new GoogleGenAI(process.env.GEMINI_API_KEY);
