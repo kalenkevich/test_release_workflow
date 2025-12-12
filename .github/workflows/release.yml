@@ -1,0 +1,72 @@
+name: Release & Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: 'Version Bump Type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+        - patch
+        - minor
+        - major
+
+permissions:
+  contents: write # Required to push the version commit and create releases
+  id-token: write # Required if you use provenance publishing (optional)
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Important: Fetch all history for git describe/log to work
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Version Bump
+        id: version
+        run: |
+          # bumps version, updates package.json, commits, and creates a git tag
+          npm version ${{ inputs.version_type }} -m "chore(release): %s [skip ci]"
+          
+          # Extract new version for later steps
+          echo "NEW_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+
+      - name: Build Project
+        run: npm run build --if-present
+
+      - name: Publish to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Push Changes
+        run: git push --follow-tags origin main
+
+      - name: Generate Release Notes (Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/generate-release-notes.js
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create ${{ env.NEW_TAG }} \
+            --title "${{ env.NEW_TAG }}" \
+            --notes-file RELEASE_NOTES.md \
+            --latest
