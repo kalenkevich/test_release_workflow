@@ -48,11 +48,11 @@ async function generateNotes() {
     `;
 
     console.log("Generating release notes with Gemini...");
-    const result = await ai.models.generateContent({
+    const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
       contents: prompt,
     });
-    const releaseNotes = result.response.text();
+    const releaseNotes = response.text;
 
     // 4. Write to file for the GitHub CLI to use later
     fs.writeFileSync("RELEASE_NOTES.md", releaseNotes);
