@@ -61,7 +61,7 @@ jobs:
       - name: Generate Release Notes (Gemini)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node scripts/generate-release-notes.js
+        run: node scripts/generate_release_notes.js
 
       - name: Create GitHub Release
         env:
