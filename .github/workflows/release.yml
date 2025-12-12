@@ -53,7 +53,7 @@ jobs:
           echo "NEW_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
 
       - name: Publish to NPM
-        run: npm publish
+        run: npm publish --provenance=true
 
       - name: Push Changes
         run: git push --follow-tags origin main
