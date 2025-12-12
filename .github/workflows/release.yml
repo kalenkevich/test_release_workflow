@@ -31,6 +31,12 @@ jobs:
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
+      
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build --if-present
 
       - name: Configure Git
         run: |
@@ -45,9 +51,6 @@ jobs:
           
           # Extract new version for later steps
           echo "NEW_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
-
-      - name: Build Project
-        run: npm run build --if-present
 
       - name: Publish to NPM
         run: npm publish
