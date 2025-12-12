@@ -43,14 +43,14 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      # - name: Version Bump
-      #   id: version
-      #   run: |
-      #     # bumps version, updates package.json, commits, and creates a git tag
-      #     npm version ${{ inputs.version_type }} -m "chore(release): %s [skip ci]"
+      - name: Version Bump
+        id: version
+        run: |
+          # bumps version, updates package.json, commits, and creates a git tag
+          npm version ${{ inputs.version_type }} -m "chore(release): %s [skip ci]"
           
-      #     # Extract new version for later steps
-      #     echo "NEW_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+          # Extract new version for later steps
+          echo "NEW_TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
 
       - name: Publish to NPM
         run: npm publish
