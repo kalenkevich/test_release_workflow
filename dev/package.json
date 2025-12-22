@@ -1,0 +1,37 @@
+{
+  "name": "@kalenkevich/test_release_workflow-dev",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "typings": "./dist/types/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "scripts": {
+    "build": "npm run build:types && npm run build:cjs && npm run build:esm",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:cjs": "esbuild src/main.ts --bundle --platform=node --target=node20 --outdir=dist/cjs --format=cjs --sourcemap",
+    "build:esm": "esbuild src/main.ts --bundle --platform=node --target=node20 --outdir=dist/esm --format=esm --sourcemap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalenkevich/test_release_workflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kalenkevich/test_release_workflow/issues"
+  },
+  "homepage": "https://github.com/kalenkevich/test_release_workflow#readme",
+  "dependencies": {
+    "@kalenkevich/test_release_workflow": "^0.1.0"
+  }
+}

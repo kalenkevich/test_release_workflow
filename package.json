@@ -1,25 +1,13 @@
 {
-  "name": "@kalenkevich/test_release_workflow",
+  "name": "test_release_workflow",
   "version": "0.1.0",
   "description": "",
   "type": "module",
-  "typings": "./dist/types/index.d.ts",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
-      "default": "./dist/esm/index.js"
-    }
-  },
   "scripts": {
-    "build": "npm run build:types && npm run build:cjs && npm run build:esm",
-    "build:types": "tsc --emitDeclarationOnly",
-    "build:cjs": "esbuild src/main.ts --bundle --platform=node --target=node20 --outdir=dist/cjs --format=cjs --sourcemap",
-    "build:esm": "esbuild src/main.ts --bundle --platform=node --target=node20 --outdir=dist/esm --format=esm --sourcemap",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build --workspaces",
+    "build:types": "npm run build:types --workspaces",
+    "build:cjs": "npm run build:cjs --workspaces",
+    "build:esm": "npm run build:esm --workspaces"
   },
   "repository": {
     "type": "git",
