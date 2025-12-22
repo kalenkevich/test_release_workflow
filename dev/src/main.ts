@@ -1,5 +1,5 @@
 import {doHelloWorld} from '@kalenkevich/test_release_workflow';
 
-export function doHelloWorld() {
+export function doHelloWorldDev() {
     doHelloWorld();
 }
