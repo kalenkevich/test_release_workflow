@@ -13,6 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/kalenkevich/test_release_workflow.git"
   },
+   "workspaces": [
+    "core",
+    "dev"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
