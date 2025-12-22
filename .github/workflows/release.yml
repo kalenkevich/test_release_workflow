@@ -56,11 +56,11 @@ jobs:
         run: git push origin --tags
 
       - name: Publish Core package to NPM
-        cwd: ./core
+        working-directory: ./core
         run: npm publish --access=public --registry https://registry.npmjs.org/
 
       - name: Publish Dev package to NPM
-        cwd: ./dev
+        working-directory: ./dev
         run: npm publish --access=public --registry https://registry.npmjs.org/
 
       - name: Generate Release Notes (Gemini)
