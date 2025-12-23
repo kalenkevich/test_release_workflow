@@ -1,29 +1,25 @@
-import * as fs from "fs";
-import { execSync } from "child_process";
+import * as fs from "node:fs";
+import { execSync } from "node:child_process";
 import { GoogleGenAI } from "@google/genai";
 
-// Initialize Gemini
-const ai = new GoogleGenAI({apiKey: process.env.GEMINI_API_KEY});
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 async function generateNotes() {
   try {
-    // 1. Get the latest tag (the one we just created) and the previous one
     const currentTag = execSync("git describe --tags --abbrev=0").toString().trim();
-    
+
     let previousTag;
     try {
-      // Try to find the tag before the current one
       previousTag = execSync(`git describe --tags --abbrev=0 ${currentTag}^`).toString().trim();
     } catch (e) {
       console.log("No previous tag found. Assuming first release.");
-      previousTag = null; // First release scenario
+      previousTag = null;
     }
 
-    // 2. Get commit messages between tags
-    const logCommand = previousTag 
-      ? `git log ${previousTag}..${currentTag} --pretty=format:"- %s (%h)"` 
+    const logCommand = previousTag
+      ? `git log ${previousTag}..${currentTag} --pretty=format:"- %s (%h)"`
       : `git log --pretty=format:"- %s (%h)"`;
-    
+
     const commitLogs = execSync(logCommand).toString();
 
     if (!commitLogs) {
@@ -32,7 +28,6 @@ async function generateNotes() {
       return;
     }
 
-    // 3. Prompt Gemini
     const prompt = `
       You are a release manager for a software project. 
       Generate clean, professional GitHub release notes (in Markdown) based on the following commit messages.
@@ -54,7 +49,6 @@ async function generateNotes() {
     });
     const releaseNotes = response.text;
 
-    // 4. Write to file for the GitHub CLI to use later
     fs.writeFileSync("RELEASE_NOTES.md", releaseNotes);
     console.log("RELEASE_NOTES.md generated successfully.");
 
