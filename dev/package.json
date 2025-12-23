@@ -17,8 +17,8 @@
   "scripts": {
     "build": "npm run build:types && npm run build:cjs && npm run build:esm",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:cjs": "esbuild src/main.ts --bundle --platform=node --target=node20 --outdir=dist/cjs --format=cjs --sourcemap",
-    "build:esm": "esbuild src/main.ts --bundle --platform=node --target=node20 --outdir=dist/esm --format=esm --sourcemap"
+    "build:cjs": "esbuild src/index.ts --bundle --platform=node --target=node20 --outdir=dist/cjs --format=cjs --sourcemap",
+    "build:esm": "esbuild src/index.ts --bundle --platform=node --target=node20 --outdir=dist/esm --format=esm --sourcemap"
   },
   "repository": {
     "type": "git",

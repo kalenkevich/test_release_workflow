@@ -3,15 +3,15 @@
   "version": "0.1.1",
   "description": "",
   "type": "module",
-  "typings": "./dist/types/index.d.ts",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "typings": "./dist/types/main.d.ts",
+  "main": "./dist/cjs/main.js",
+  "module": "./dist/esm/main.js",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js",
-      "default": "./dist/esm/index.js"
+      "types": "./dist/types/main.d.ts",
+      "import": "./dist/esm/main.js",
+      "require": "./dist/cjs/main.js",
+      "default": "./dist/esm/main.js"
     }
   },
   "scripts": {
