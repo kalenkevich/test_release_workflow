@@ -51,11 +51,14 @@ jobs:
       - name: Update Dev package version
         run: node ./scripts/update_version.js --package=dev --version=${{ env.NEW_TAG }}
 
+      - name: Commit version changes
+        run: git add . && git commit -m "Bump version to v${{ env.NEW_TAG }}"
+
       - name: Create version tag
         run: git tag -a v${{ env.NEW_TAG }} -m "v${{ env.NEW_TAG }}"
 
       - name: Push version tag to GitHub
-        run: git push origin --tags
+        run: git push origin --force-tags
 
       - name: Publish Core package to NPM
         working-directory: ./core
