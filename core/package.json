@@ -1,6 +1,6 @@
 {
   "name": "@kalenkevich/test_release_workflow",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "type": "module",
   "typings": "./dist/types/main.d.ts",
