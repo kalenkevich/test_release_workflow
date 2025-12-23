@@ -58,7 +58,7 @@ jobs:
         run: git tag -a v${{ env.NEW_TAG }} -m "v${{ env.NEW_TAG }}"
 
       - name: Push version tag to GitHub
-        run: git push origin --force-tags
+        run: git push origin --follow-tags
 
       - name: Publish Core package to NPM
         working-directory: ./core
