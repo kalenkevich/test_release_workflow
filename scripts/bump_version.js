@@ -20,11 +20,12 @@ export const version = '${newVersion}';
 `.trim();
 }
 
-async function npmVersion(versionType, cwd) {
-  const response = await execAsync(`npm version ${versionType}`, { cwd, stdio: 'inherit' });
-  const version = response.stdout.trim();
+async function npmVersion(versionType, projectDir) {
+  await execAsync(`npm version ${versionType}`, { cwd: projectDir, stdio: 'inherit' });
+  const packageJsonPath = path.join(projectDir, 'package.json');
+  const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
 
-  return version.slice(1); // Remove the leading 'v' from the version string
+  return packageJson.version;
 }
 
 function parseArgs(args) {
