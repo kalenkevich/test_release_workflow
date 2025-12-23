@@ -5,4 +5,4 @@
  */
 
 // version: major.minor.patch
-export const version = '0.1.3';
+export const version = '0.1.5';
