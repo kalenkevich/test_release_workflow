@@ -44,7 +44,9 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Update Core package version
-        run: echo "NEW_TAG=$(node ./scripts/update_version.js --package=core --version=${{ inputs.version_type }})" >> $GITHUB_ENV
+        run: |
+          echo "NEW_TAG=$(node ./scripts/update_version.js --package=core --version=${{ inputs.version_type }})" >> $GITHUB_ENV
+          echo ${{ env.NEW_TAG }}
 
       - name: Update Dev package version
         run: node ./scripts/update_version.js --package=dev --version=${{ env.NEW_TAG }}
