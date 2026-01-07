@@ -34,7 +34,7 @@ function parseArgs(args) {
   for (let arg of args) {
     const [key, value] = arg.split('=');
     const name = key.replace('--', '');
-    result[name] = value;
+    result[name] = value || '';
   }
 
   return result;
@@ -60,7 +60,9 @@ async function main({ package: packageName, version }) {
   const projectDir = path.join(dirname, packageName);
   const newVersion = await npmVersion(version, projectDir);
 
-  await fs.writeFile(path.join(projectDir, 'src', 'version.ts'), getVersionFileContent(newVersion));
+  if (packageName === 'core') {
+    await fs.writeFile(path.join(projectDir, 'src', 'version.ts'), getVersionFileContent(newVersion));
+  }
 
   if (packageName === 'dev') {
     await updateDependencyVersion(projectDir, '@kalenkevich/test_release_workflow', newVersion);

@@ -51,6 +51,9 @@ jobs:
       - name: Update Dev package version
         run: node ./scripts/update_version.js --package=dev --version=${{ env.NEW_TAG }}
 
+      - name: Update Root package version
+        run: node ./scripts/update_version.js --package= --version=${{ env.NEW_TAG }}
+
       - name: Commit version changes
         run: git add . && git commit -m "Bump version to v${{ env.NEW_TAG }}"
 
