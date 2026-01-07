@@ -21,7 +21,7 @@ export const version = '${newVersion}';
 }
 
 async function npmVersion(versionType, projectDir) {
-  await execAsync(`npm version ${versionType}`, { cwd: projectDir, stdio: 'inherit' });
+  await execAsync(`npm version ${versionType} -f`, { cwd: projectDir, stdio: 'inherit' });
   const packageJsonPath = path.join(projectDir, 'package.json');
   const packageJson = JSON.parse(await fs.readFile(packageJsonPath, 'utf8'));
 
