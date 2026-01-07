@@ -1,6 +1,6 @@
 {
   "name": "test_release_workflow",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "type": "module",
   "scripts": {
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/kalenkevich/test_release_workflow.git"
   },
-   "workspaces": [
+  "workspaces": [
     "core",
     "dev"
   ],
