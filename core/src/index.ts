@@ -1,3 +1,7 @@
+function someFunction() {
+  return "Hello, World!";
+}
+
 export function doHelloWorld() {
-  console.log("Hello, World!");
+  console.log(someFunction());
 }
