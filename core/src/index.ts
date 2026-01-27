@@ -1,12 +1,12 @@
-function someFunction() {
+function sayHello() {
   return "Hello, World!";
 }
 
-function someOtherFunction() {
+function sayGoodbye() {
   return "Goodbye, World!";
 }
 
 export function doHelloWorld() {
-  console.log(someFunction());
-  console.log(someOtherFunction());
+  console.log(sayHello());
+  console.log(sayGoodbye());
 }
