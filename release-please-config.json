@@ -1,0 +1,21 @@
+{
+  "packages": {
+    "@kalenkevich/test_release_workflow": {
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "changelog-path": "CHANGELOG.md",
+      "draft": false,
+      "package-name": "@kalenkevich/test_release_workflow",
+      "release-type": "node"
+    },
+    "@kalenkevich/test_release_workflow-dev": {
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "changelog-path": "CHANGELOG.md",
+      "draft": false,
+      "package-name": "@kalenkevich/test_release_workflow-dev",
+      "release-type": "node"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
