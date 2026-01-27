@@ -30,8 +30,5 @@
   "bugs": {
     "url": "https://github.com/kalenkevich/test_release_workflow/issues"
   },
-  "homepage": "https://github.com/kalenkevich/test_release_workflow#readme",
-  "peerDependencies": {
-    "@kalenkevich/test_release_workflow-dev": "0.2.2"
-  }
+  "homepage": "https://github.com/kalenkevich/test_release_workflow#readme"
 }
