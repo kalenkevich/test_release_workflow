@@ -22,25 +22,25 @@ jobs:
           manifest-file: .release-please-manifest.json
 
       - name: Checkout Repository
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ steps.release.outputs['core'].releases_created || steps.release.outputs['dev'].releases_created }}
         uses: actions/checkout@v2
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ steps.release.outputs['core'].releases_created || steps.release.outputs['dev'].releases_created }}
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Publish Core package to NPM
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ steps.release.outputs['core'].releases_created }}
         working-directory: ./core
         run: npm publish --access=public --registry https://registry.npmjs.org/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_CORE_TOKEN }}
 
       - name: Publish Dev package to NPM
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ steps.release.outputs['dev'].releases_created }}
         working-directory: ./dev
         run: npm publish --access=public --registry https://registry.npmjs.org/
         env:
