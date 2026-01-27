@@ -6,7 +6,13 @@
       "changelog-path": "CHANGELOG.md",
       "draft": false,
       "package-name": "@kalenkevich/test_release_workflow",
-      "release-type": "node"
+      "release-type": "node",
+      "extra-files": [
+        {
+          "path": "src/version.ts",
+          "type": "generic"
+        }
+      ]
     },
     "dev": {
       "bump-minor-pre-major": false,
@@ -22,11 +28,6 @@
       "type": "node-workspace"
     }
   ],
-  "extra-files": [
-    {
-      "path": "core/src/version.ts",
-      "type": "generic"
-    }
-  ],
+
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
