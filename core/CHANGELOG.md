@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-v0.3.0...test_release_workflow-v0.3.1) (2026-01-27)
+
+
+### Bug Fixes
+
+* change doHelloWorld function logic. ([3a21c5d](https://github.com/kalenkevich/test_release_workflow/commit/3a21c5d64fc9c9e394587fa905326507d6e8c40d))
+
 ## [0.3.0](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-v0.2.3...test_release_workflow-v0.3.0) (2026-01-27)
 
 
