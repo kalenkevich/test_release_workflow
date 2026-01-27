@@ -7,6 +7,8 @@ function sayGoodbye() {
 }
 
 export function doHelloWorld() {
-  console.log(sayHello());
-  console.log(sayGoodbye());
+  const hello = sayHello();
+  const goodbye = sayGoodbye();
+
+  return { hello, goodbye };
 }
