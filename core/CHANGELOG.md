@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.8](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-v0.3.2...test_release_workflow-v0.2.8) (2026-01-28)
+
+
+### Miscellaneous Chores
+
+* **test_release_workflow:** Synchronize adk versions
+
 ## [0.3.2](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-v0.3.1...test_release_workflow-v0.3.2) (2026-01-28)
 
 
