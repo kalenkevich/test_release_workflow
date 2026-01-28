@@ -5,10 +5,9 @@
   "group-pull-request-title-pattern": "release: v${version}",
   "packages": {
     ".": {
-      "component": "root",
+      "component": "main",
       "skip-changelog": true,
-      "skip-github-release": true,
-      "include-component-in-tag": false
+      "skip-github-release": true
     },
     "core": {
       "changelog-path": "CHANGELOG.md",
@@ -40,7 +39,7 @@
       "type": "linked-versions",
       "groupName": "adk",
       "components": [
-        "root",
+        "main",
         "test_release_workflow",
         "test_release_workflow-dev"
       ]
