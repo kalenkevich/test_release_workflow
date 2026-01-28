@@ -5,6 +5,14 @@
 
 ### Miscellaneous Chores
 
+* release 0.3.2 ([f95e026](https://github.com/kalenkevich/test_release_workflow/commit/f95e026fdb4bc1dbc60eb15d8279ccd0617bade0))
+* release 0.3.2 ([39d8b72](https://github.com/kalenkevich/test_release_workflow/commit/39d8b7224e48791e9d3f352c78233d18b39bcbfd))
+
+## [0.3.2](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-v0.3.2...test_release_workflow-v0.3.2) (2026-01-28)
+
+
+### Miscellaneous Chores
+
 * release 0.3.2 ([39d8b72](https://github.com/kalenkevich/test_release_workflow/commit/39d8b7224e48791e9d3f352c78233d18b39bcbfd))
 
 ## [0.2.8](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-v0.3.2...test_release_workflow-v0.2.8) (2026-01-28)

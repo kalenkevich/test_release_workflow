@@ -5,6 +5,19 @@
 
 ### Bug Fixes
 
+* trigger another workflow change. ([b31f205](https://github.com/kalenkevich/test_release_workflow/commit/b31f205de1d70ea8d5be0a85f9b4a820f36e1a6b))
+* update dev to trigger the release. ([a837250](https://github.com/kalenkevich/test_release_workflow/commit/a8372503eab3605296014286ac65b40f403c8b7f))
+
+
+### Miscellaneous Chores
+
+* release 0.3.2 ([f95e026](https://github.com/kalenkevich/test_release_workflow/commit/f95e026fdb4bc1dbc60eb15d8279ccd0617bade0))
+
+## [0.3.2](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-dev-v0.3.2...test_release_workflow-dev-v0.3.2) (2026-01-28)
+
+
+### Bug Fixes
+
 * trigger change for release. ([d849368](https://github.com/kalenkevich/test_release_workflow/commit/d849368427df18b2cdd6ac8a86d417ed4b591055))
 * update dev package to test worflow. ([e8faf0b](https://github.com/kalenkevich/test_release_workflow/commit/e8faf0b2511fa86ce4e874029b6e3048af2f615e))
 * update dev to trigger release please. ([5539737](https://github.com/kalenkevich/test_release_workflow/commit/5539737f9b1f95900bdbdf3544621d5fda2bffcb))
