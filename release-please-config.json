@@ -1,11 +1,7 @@
 {
   "packages": {
     "core": {
-      "bump-minor-pre-major": false,
-      "bump-patch-for-minor-pre-major": false,
       "changelog-path": "CHANGELOG.md",
-      "draft": false,
-      "package-name": "@kalenkevich/test_release_workflow",
       "component": "test_release_workflow",
       "release-type": "node",
       "extra-files": [
@@ -16,12 +12,8 @@
       ]
     },
     "dev": {
-      "bump-minor-pre-major": false,
-      "bump-patch-for-minor-pre-major": false,
       "changelog-path": "CHANGELOG.md",
-      "draft": false,
       "component": "test_release_workflow-dev",
-      "package-name": "@kalenkevich/test_release_workflow-dev",
       "release-type": "node",
       "extra-files": [
         {
