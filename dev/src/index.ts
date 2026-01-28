@@ -4,4 +4,6 @@ export function doHelloWorldDev() {
   const response = doHelloWorld();
 
   console.log(response);
+
+  return response;
 }
