@@ -1,8 +1,10 @@
 {
+  "release-type": "node",
+  "force-tag-creation": true,
+  "pull-request-header": "Automated Release PR",
+  "group-pull-request-title-pattern": "release: v${version}",
   "packages": {
     ".": {
-      "release-type": "node",
-      "component": "root",
       "skip-changelog": true,
       "skip-github-release": true,
       "include-component-in-tag": false
@@ -10,7 +12,6 @@
     "core": {
       "changelog-path": "CHANGELOG.md",
       "component": "test_release_workflow",
-      "release-type": "node",
       "extra-files": [
         {
           "path": "src/version.ts",
@@ -21,7 +22,6 @@
     "dev": {
       "changelog-path": "CHANGELOG.md",
       "component": "test_release_workflow-dev",
-      "release-type": "node",
       "extra-files": [
         {
           "path": "src/version.ts",
@@ -39,13 +39,11 @@
       "type": "linked-versions",
       "groupName": "adk",
       "components": [
+        ".",
         "test_release_workflow",
         "test_release_workflow-dev"
       ]
     }
   ],
-  "force-tag-creation": true,
-  "pull-request-header": "Automated Release PR",
-  "group-pull-request-title-pattern": "release: v${version}",
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
