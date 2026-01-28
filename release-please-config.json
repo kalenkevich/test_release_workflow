@@ -1,5 +1,10 @@
 {
   "packages": {
+    ".": {
+      "release-type": "node",
+      "skip-changelog": true,
+      "skip-github-release": true
+    },
     "core": {
       "changelog-path": "CHANGELOG.md",
       "component": "test_release_workflow",
@@ -34,13 +39,6 @@
       "components": [
         "test_release_workflow", "test_release_workflow-dev"
       ]
-    }
-  ],
-  "extra-files": [
-    {
-      "path": "package.json",
-      "type": "json",
-      "jsonpath": "$.version"
     }
   ],
   "pull-request-header": "Automated Release PR",
