@@ -4,6 +4,8 @@
       "changelog-path": "CHANGELOG.md",
       "component": "test_release_workflow",
       "release-type": "node",
+      "pull-request-header": "Automated Release PR",
+      "pull-request-title-pattern": "release: ${version}",
       "extra-files": [
         {
           "path": "src/version.ts",
@@ -15,6 +17,8 @@
       "changelog-path": "CHANGELOG.md",
       "component": "test_release_workflow-dev",
       "release-type": "node",
+      "pull-request-header": "Automated Release PR",
+      "pull-request-title-pattern": "release: ${version}",
       "extra-files": [
         {
           "path": "src/version.ts",
@@ -36,8 +40,6 @@
       ]
     }
   ],
-  "pull-request-header": "Automated Release PR",
-  "pull-request-title-pattern": "release: ${version}",
   "extra-files": [
     {
       "path": "package.json",
