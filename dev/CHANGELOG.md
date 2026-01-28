@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.6](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-dev-v0.2.5...test_release_workflow-dev-v0.2.6) (2026-01-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @kalenkevich/test_release_workflow bumped from ^0.3.1 to ^0.3.2
+
 ## [0.2.5](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-dev-v0.2.4...test_release_workflow-dev-v0.2.5) (2026-01-27)
 
 

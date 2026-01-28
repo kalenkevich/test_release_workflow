@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-v0.3.1...test_release_workflow-v0.3.2) (2026-01-28)
+
+
+### Bug Fixes
+
+* add another function to test the workflow. ([241bb6a](https://github.com/kalenkevich/test_release_workflow/commit/241bb6ab90c071ef3f66f2e004fd6af3965a7cf2))
+
 ## [0.3.1](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-v0.3.0...test_release_workflow-v0.3.1) (2026-01-27)
 
 
