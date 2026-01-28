@@ -39,7 +39,6 @@
       "type": "linked-versions",
       "groupName": "adk",
       "components": [
-        "root",
         "test_release_workflow",
         "test_release_workflow-dev"
       ]
