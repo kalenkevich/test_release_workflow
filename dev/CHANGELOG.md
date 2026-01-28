@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.7](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-dev-v0.2.6...test_release_workflow-dev-v0.2.7) (2026-01-28)
+
+
+### Bug Fixes
+
+* update dev package to test worflow. ([e8faf0b](https://github.com/kalenkevich/test_release_workflow/commit/e8faf0b2511fa86ce4e874029b6e3048af2f615e))
+
 ## [0.2.6](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-dev-v0.2.5...test_release_workflow-dev-v0.2.6) (2026-01-28)
 
 
