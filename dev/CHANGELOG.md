@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.3](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-dev-v0.3.2...test_release_workflow-dev-v0.3.3) (2026-01-28)
+
+
+### Bug Fixes
+
+* trigger change 111 ([c27d2a7](https://github.com/kalenkevich/test_release_workflow/commit/c27d2a7c4655d09cff25816c5ae3526d35bfad36))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @kalenkevich/test_release_workflow bumped from ^0.3.2 to ^0.3.3
+
 ## [0.3.2](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-dev-v0.3.2...test_release_workflow-dev-v0.3.2) (2026-01-28)
 
 
