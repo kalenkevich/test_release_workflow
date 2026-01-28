@@ -6,8 +6,6 @@
   "packages": {
     ".": {
       "component": "root",
-      "skip-changelog": true,
-      "skip-github-release": true,
       "include-component-in-tag": false
     },
     "core": {
