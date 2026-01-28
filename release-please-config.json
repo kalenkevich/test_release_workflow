@@ -20,7 +20,13 @@
       "changelog-path": "CHANGELOG.md",
       "draft": false,
       "package-name": "@kalenkevich/test_release_workflow-dev",
-      "release-type": "node"
+      "release-type": "node",
+      "extra-files": [
+        {
+          "path": "src/version.ts",
+          "type": "generic"
+        }
+      ]
     }
   },
   "plugins": [

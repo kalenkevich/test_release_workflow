@@ -1,5 +1,7 @@
 import {doHelloWorld} from '@kalenkevich/test_release_workflow';
 
 export function doHelloWorldDev() {
-    doHelloWorld();
+  const response = doHelloWorld();
+
+  console.log(response);
 }
