@@ -4,8 +4,6 @@
       "changelog-path": "CHANGELOG.md",
       "component": "test_release_workflow",
       "release-type": "node",
-      "pull-request-header": "Automated Release PR",
-      "pull-request-title-pattern": "release: ${version}",
       "extra-files": [
         {
           "path": "src/version.ts",
@@ -17,8 +15,6 @@
       "changelog-path": "CHANGELOG.md",
       "component": "test_release_workflow-dev",
       "release-type": "node",
-      "pull-request-header": "Automated Release PR",
-      "pull-request-title-pattern": "release: ${version}",
       "extra-files": [
         {
           "path": "src/version.ts",
@@ -47,6 +43,7 @@
       "jsonpath": "$.version"
     }
   ],
-  "group-pull-request-title-pattern": "release: ${version}",
+  "pull-request-header": "Automated Release PR",
+  "group-pull-request-title-pattern": "release: ${core.version}",
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
