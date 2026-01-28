@@ -44,6 +44,6 @@
     }
   ],
   "pull-request-header": "Automated Release PR",
-  "group-pull-request-title-pattern": "release: ${core.version}",
+  "group-pull-request-title-pattern": "release: ${branch}",
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
