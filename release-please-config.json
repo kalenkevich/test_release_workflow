@@ -50,7 +50,7 @@
     {
       "path": "package.json",
       "type": "json",
-      "jsonpath": "version"
+      "jsonpath": "$.version"
     }
   ],
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
