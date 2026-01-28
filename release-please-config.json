@@ -6,6 +6,7 @@
       "changelog-path": "CHANGELOG.md",
       "draft": false,
       "package-name": "@kalenkevich/test_release_workflow",
+      "component": "test_release_workflow",
       "release-type": "node",
       "extra-files": [
         {
@@ -19,6 +20,7 @@
       "bump-patch-for-minor-pre-major": false,
       "changelog-path": "CHANGELOG.md",
       "draft": false,
+      "component": "test_release_workflow-dev",
       "package-name": "@kalenkevich/test_release_workflow-dev",
       "release-type": "node",
       "extra-files": [
@@ -31,7 +33,15 @@
   },
   "plugins": [
     {
-      "type": "node-workspace"
+      "type": "node-workspace",
+      "merge": false
+    },
+    {
+      "type": "linked-versions",
+      "groupName": "adk",
+      "components": [
+        "test_release_workflow", "test_release_workflow"
+      ]
     }
   ],
 
