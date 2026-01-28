@@ -4,6 +4,8 @@
   "description": "",
   "type": "module",
   "scripts": {
+    "rebuild": "npm run clean:all && npm install && npm run build",
+    "clean:all": "npm run clean --workspaces",
     "build": "npm run build --workspaces",
     "build:types": "npm run build:types --workspaces",
     "build:cjs": "npm run build:cjs --workspaces",
