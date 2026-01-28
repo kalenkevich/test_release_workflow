@@ -7,6 +7,20 @@
 
 * trigger another workflow change. ([b31f205](https://github.com/kalenkevich/test_release_workflow/commit/b31f205de1d70ea8d5be0a85f9b4a820f36e1a6b))
 * update dev to trigger the release. ([a837250](https://github.com/kalenkevich/test_release_workflow/commit/a8372503eab3605296014286ac65b40f403c8b7f))
+* update to trigger release. ([d89b5ad](https://github.com/kalenkevich/test_release_workflow/commit/d89b5ad8ddb1a8a0b2c86098ae2230018839ae99))
+
+
+### Miscellaneous Chores
+
+* release 0.3.2 ([f95e026](https://github.com/kalenkevich/test_release_workflow/commit/f95e026fdb4bc1dbc60eb15d8279ccd0617bade0))
+
+## [0.3.2](https://github.com/kalenkevich/test_release_workflow/compare/test_release_workflow-dev-v0.3.2...test_release_workflow-dev-v0.3.2) (2026-01-28)
+
+
+### Bug Fixes
+
+* trigger another workflow change. ([b31f205](https://github.com/kalenkevich/test_release_workflow/commit/b31f205de1d70ea8d5be0a85f9b4a820f36e1a6b))
+* update dev to trigger the release. ([a837250](https://github.com/kalenkevich/test_release_workflow/commit/a8372503eab3605296014286ac65b40f403c8b7f))
 
 
 ### Miscellaneous Chores
