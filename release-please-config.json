@@ -46,5 +46,12 @@
   ],
   "pull-request-header": "Automated Release PR",
   "pull-request-title-pattern": "release: ${version}",
+  "extra-files": [
+    {
+      "path": "package.json",
+      "type": "json",
+      "jsonpath": "version"
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
